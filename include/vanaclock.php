@@ -64,8 +64,10 @@
         $vana_now = $vana_now % 60;
     $vana_second = $vana_now;
     if ($vana_second < 10){$vana_second = "0".$vana_second;}else{$vana_second = $vana_second;}
-
-//輸出內容，圖片引用語法依 AJAX 呼叫調整，後續再以 CSS 語法美化呈現
+//定義 $vana_time 為計算完後的 Vana'diel 時間陣列
+    $vana_time = array($vana_year, $vana_month, $vana_day, $vana_hour, $vana_minute, $vana_second);
+//輸出內容，圖片引路徑法依 AJAX 呼叫調整。
+//Todo：再以 CSS 語法美化呈現
     echo "<table border=\"0\">\n";
     echo "<tr valign=\"center\"><td>Vana'diel:<br />Earth:</td>";
     echo "<td>".$vana_year."/".$vana_month."/".$vana_day." ".$vana_hour.":".$vana_minute.":".$vana_second."<br />";
